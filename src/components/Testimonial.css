@@ -1,0 +1,35 @@
+.testimonial {
+  background: var(--wine-deep);
+  color: var(--ivory);
+}
+
+.testimonial__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 22px;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.testimonial__glyph {
+  width: 30px;
+  height: 30px;
+  color: var(--gold-soft);
+}
+
+.testimonial blockquote {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: clamp(22px, 3vw, 32px);
+  line-height: 1.5;
+}
+
+.testimonial cite {
+  font-style: normal;
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: rgba(248, 243, 236, 0.6);
+}

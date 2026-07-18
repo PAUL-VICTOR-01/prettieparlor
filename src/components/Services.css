@@ -1,0 +1,82 @@
+.services__head {
+  max-width: 640px;
+}
+
+.services__title {
+  margin-top: 16px;
+  font-size: clamp(30px, 3.6vw, 44px);
+  color: var(--espresso);
+}
+
+.services__list {
+  margin-top: 56px;
+  border-top: 1px solid var(--line);
+}
+
+.services__row {
+  display: grid;
+  grid-template-columns: 56px 260px 1fr auto;
+  align-items: center;
+  gap: 28px;
+  padding: 30px 0;
+  border-bottom: 1px solid var(--line);
+  transition: background 0.3s ease;
+}
+
+.services__row:hover {
+  background: var(--ivory-deep);
+}
+
+.services__mark {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 30px;
+  color: var(--gold);
+}
+
+.services__name {
+  font-size: 22px;
+  color: var(--espresso);
+}
+
+.services__copy {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--espresso-soft);
+  max-width: 480px;
+}
+
+.services__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--wine);
+  white-space: nowrap;
+}
+
+.services__link span {
+  transition: transform 0.3s ease;
+}
+
+.services__row:hover .services__link span {
+  transform: translateX(4px);
+}
+
+@media (max-width: 860px) {
+  .services__row {
+    grid-template-columns: 40px 1fr;
+    grid-template-areas:
+      'mark name'
+      'copy copy'
+      'link link';
+    row-gap: 10px;
+  }
+  .services__mark { grid-area: mark; }
+  .services__name { grid-area: name; }
+  .services__copy { grid-area: copy; max-width: none; }
+  .services__link { grid-area: link; }
+}

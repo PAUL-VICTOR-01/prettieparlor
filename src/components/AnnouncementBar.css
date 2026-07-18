@@ -1,0 +1,32 @@
+.announce {
+  background: var(--espresso);
+  color: var(--ivory-deep);
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.announce__track {
+  display: flex;
+  width: max-content;
+  animation: marquee 32s linear infinite;
+}
+
+.announce__item {
+  padding: 9px 40px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border-right: 1px solid var(--line-dark);
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .announce__track {
+    animation: none;
+  }
+}

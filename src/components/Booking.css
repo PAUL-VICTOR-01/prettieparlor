@@ -1,0 +1,67 @@
+.booking {
+  background: var(--wine);
+  color: var(--ivory);
+}
+
+.booking__inner {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr auto;
+  align-items: center;
+  gap: 48px;
+}
+
+.booking__title {
+  margin-top: 14px;
+  font-size: clamp(28px, 3.4vw, 42px);
+}
+
+.booking__copy {
+  margin-top: 16px;
+  max-width: 380px;
+  font-size: 14.5px;
+  line-height: 1.7;
+  color: rgba(248, 243, 236, 0.82);
+}
+
+.booking__details {
+  display: grid;
+  gap: 18px;
+}
+
+.booking__details dt {
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold-soft);
+}
+
+.booking__details dd {
+  margin-top: 4px;
+  font-size: 15px;
+}
+
+.booking__cta {
+  background: var(--whatsapp);
+  color: var(--ivory);
+  justify-self: start;
+  box-shadow: 0 8px 22px rgba(37, 211, 102, 0.35);
+}
+
+.booking__cta svg {
+  width: 18px;
+  height: 18px;
+}
+
+.booking__cta:hover {
+  background: var(--whatsapp-deep);
+}
+
+@media (max-width: 900px) {
+  .booking__inner {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+  .booking__cta {
+    justify-self: stretch;
+  }
+}
